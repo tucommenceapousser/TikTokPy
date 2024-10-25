@@ -58,6 +58,23 @@
         .floating {
             animation: float 4s ease-in-out infinite;
         }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Style pour l'image du logo */
+        .logo-container img {
+            border: 3px solid #00ff88; /* Bordure fluo */
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 100px; /* Ajuster la taille du logo */
+            max-height: 100px;
+            background-color: #1a1a1a; /* Fond autour de l'image pour le contraste */
+        }
     </style>
 </head>
 <body class="p-4 flex flex-col min-h-screen bg-gradient-to-b from-blue-900 to-purple-900">
@@ -76,7 +93,9 @@
         </form>
         <div id="result" class="mt-6"></div>
     </main>
-
+    <div class="logo-container">
+        <img src="https://g.top4top.io/p_3220ojp8t0.jpg" alt="Logo de Trhacknon">
+    </div>
     <footer class="text-white text-center py-4 mt-10">
         <p class="mb-2">Crafted with ❤️ by <a href="https://github.com/tucommenceapousser" target="_blank" class="underline hover:text-purple-300 transition duration-300">TRHACKNON</a></p>
         <a href="https://github.com/tucommenceapousser/TikTokPy" target="_blank" class="inline-flex items-center bg-white bg-opacity-20 px-4 py-2 rounded-full hover:bg-opacity-30 transition duration-300 hover-lift">
