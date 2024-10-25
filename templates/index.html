@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern TikTok Downloader</title>
+    <title>Modern and Fun TikTok Downloader</title>
+    <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Download your favorite TikTok videos and audio effortlessly with style and fun!">
+    <meta name="keywords" content="TikTok, downloader, video, audio, modern, colorful, fun">
+    <meta name="author" content="TRHACKNON">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trkn-tiktok.onrender.com">
+    <meta property="og:title" content="Modern and Fun TikTok Downloader">
+    <meta property="og:description" content="Download your favorite TikTok videos and audio effortlessly with style and fun!">
+    <meta property="og:image" content="https://c.top4top.io/p_3220tyc8k0.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://trkn-tiktok.onrender.com">
+    <meta property="twitter:title" content="Modern and Fun TikTok Downloader">
+    <meta property="twitter:description" content="Download your favorite TikTok videos and audio effortlessly with style and fun!">
+    <meta property="twitter:image" content="https://c.top4top.io/p_3220tyc8k0.jpg">
+    
+    <!-- CSS and JS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -11,17 +33,43 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+    <style>
+        /* Additional fun styles */
+        .neon-text {
+            color: #fff;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #ff00ff,
+                0 0 20px #ff00ff,
+                0 0 30px #ff00ff,
+                0 0 40px #ff00ff,
+                0 0 50px #ff00ff,
+                0 0 60px #ff00ff,
+                0 0 70px #ff00ff;
+        }
+
+        @keyframes float {
+            0% { transform: translatey(0px); }
+            50% { transform: translatey(-10px); }
+            100% { transform: translatey(0px); }
+        }
+
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
 </head>
-<body class="p-4">
-    <main class="container mx-auto glass-effect p-8 w-full max-w-4xl mt-10">
-        <h1 class="text-5xl md:text-6xl font-bold text-center mb-8 text-white tracking-wide animate-pulse">TikTok Downloader</h1>
+<body class="p-4 flex flex-col min-h-screen bg-gradient-to-b from-blue-900 to-purple-900">
+    <main class="container mx-auto glass-effect p-8 w-full max-w-4xl mt-10 mb-auto">
+        <h1 class="text-5xl md:text-6xl font-bold text-center mb-8 neon-text animate-pulse floating">TikTok Downloader</h1>
         <p class="text-center text-white mb-8">Download your favorite TikTok videos and audio effortlessly!</p>
         <form id="downloadForm" class="space-y-6 max-w-xl mx-auto">
             <div class="relative">
                 <input type="text" id="url" name="url" placeholder="Enter TikTok URL" class="w-full p-4 pr-12 rounded-full bg-white bg-opacity-20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 transition duration-300">
                 <span class="material-icons absolute right-4 top-1/2 transform -translate-y-1/2 text-white animate-ping">bolt</span>
             </div>
-            <button type="submit" class="w-full bg-purple-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-purple-700 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50 flex items-center justify-center hover-lift">
+            <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-full font-semibold hover:from-pink-600 hover:to-purple-600 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50 flex items-center justify-center hover-lift">
                 <span class="material-icons">download</span>
                 Download
             </button>
@@ -36,6 +84,7 @@
             Source Code
         </a>
     </footer>
+
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
